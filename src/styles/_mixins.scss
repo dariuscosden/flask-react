@@ -1,2 +1,29 @@
 // styles - mixins
 //
+
+// transitions ===========
+@mixin ease-03 {
+  transition: all 0.3s ease;
+}
+
+// shadows ===============
+@mixin shadow-header {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@mixin shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+// containers ============
+@mixin container-styles {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin: auto;
+}
+
+// paddings ==============
+@mixin top-padding {
+  padding-top: 75px;
+}

@@ -2,5 +2,44 @@
 //
 
 .header {
-  background-color: blue;
+  @include shadow-header;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header__content {
+  @include flex-rw-sb-c;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.header__logo {
+  width: 20%;
+
+  img {
+    width: 150px;
+  }
+}
+
+.header__menu {
+  @include flex-rw-fe-c;
+  width: 80%;
+
+  a {
+    @include ease-03;
+    color: black;
+    margin-left: 20px;
+
+    &:visited {
+      color: black;
+    }
+
+    &:hover {
+      color: $main-yellow;
+      transform: translateY(-2px);
+    }
+  }
 }

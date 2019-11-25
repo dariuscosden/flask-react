@@ -1,0 +1,29 @@
+// layout - homepage
+//
+
+.homepage {
+  @include top-padding;
+  background-color: $main-yellow;
+  overflow: hidden;
+}
+
+.homepage__headline {
+  @include container-styles;
+  @include flex-rw-sb-c;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.homepage__headline-text {
+  width: 45%;
+}
+
+.homepage__headline-code {
+  width: 45%;
+
+  pre {
+    @include shadow;
+    border-radius: 10px;
+    min-height: 400px;
+  }
+}
