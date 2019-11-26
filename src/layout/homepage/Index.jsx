@@ -2,67 +2,80 @@ import React, { useState, useEffect } from 'react';
 
 // external dependencies
 //
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { hybrid } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Spring } from 'react-spring/renderprops';
+
+// internal dependencies
+//
+import Button from 'components/button';
+import HomepageCode from 'components/homepage-code';
 
 const Homepage = (props) => {
-  const codeString = `
-import React, { useState, useEffect } from 'react';
+  const { setContactModal } = props;
 
-// website component
-const Website = (props) => {
-  return (
-    <div className="website">
-      <Header />
-      <Body />
-      <Footer />
-      </div>
-  );
-}
-
-export default Website;
-	`;
-
-  // string
-  const [string, setString] = useState(codeString);
-  const [stringSplit, setStringSplit] = useState(0);
-  const [loop, setLoop] = useState();
-
+  // transition
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    let interval = null;
-    let timeout = null;
-
-    if (stringSplit <= string.length + 1) {
-      interval = setInterval(() => {
-        setStringSplit(stringSplit + 1);
-        setString(codeString.substring(0, stringSplit + 1));
-      }, 50);
-    } else {
-      timeout = setTimeout(() => {
-        setStringSplit(0);
-        setString('');
-      }, 5000);
-    }
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(timeout);
-    };
-  }, [stringSplit]);
+    setIsVisible(true);
+  }, [isVisible]);
 
   return (
-    <div className="homepage">
-      <div className="homepage__headline">
-        <div className="homepage__headline-text">
-          <h1>Custom web solutions tailored to your needs</h1>
-        </div>
-        <div className="homepage__headline-code">
-          <SyntaxHighlighter language="javascript" style={hybrid}>
-            {string}
-          </SyntaxHighlighter>
+    <>
+      <div className="homepage">
+        <div className="homepage__section-bg main-yellow">
+          <div className="homepage__section">
+            <Spring
+              to={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0px)' : 'translateY(-30px)',
+              }}
+            >
+              {(props) => (
+                <div className="homepage__headline-text" style={{ ...props }}>
+                  <h1>Custom web solutions tailored to your needs.</h1>
+                  <p>
+                    I build fully featured web applications from scratch using
+                    the latest technologies and frameworks available on the
+                    market. I offer a great degree of customizeability,
+                    efficiency, and ease of use.
+                  </p>
+                  <Button
+                    text="Get In Touch"
+                    onClick={() => setContactModal(true)}
+                  />
+                </div>
+              )}
+            </Spring>
+
+            <Spring
+              delay={200}
+              to={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0px)' : 'translateY(-30px)',
+              }}
+            >
+              {(props) => (
+                <div className="homepage__headline-code" style={{ ...props }}>
+                  <HomepageCode />
+                </div>
+              )}
+            </Spring>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="homepage__section-bg dark-gray">
+        <div className="homepage__section ">
+          <div className="homepage__schedule-call">
+            <h1>Schedule a free consultation call</h1>
+            <Button
+              secondary
+              text="Schedule a Call"
+              onClick={() => setContactModal(true)}
+            />
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

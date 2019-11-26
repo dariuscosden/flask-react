@@ -6,19 +6,30 @@ body {
   font-family: hack;
 }
 
+p {
+  line-height: 1.8em;
+  color: $black-70;
+}
+
 #app {
   height: 100vh;
+  position: relative;
 }
 
 .content {
   @include flex-cl-sb-c;
   width: 100%;
   height: 100%;
+
+  &.modal-open {
+    filter: blur(5px);
+  }
 }
 
 .content-body {
   width: 100%;
   height: 100%;
+  background-color: $dark-gray;
 }
 
 .content-footer {

@@ -1,0 +1,56 @@
+// components - modal
+//
+
+.modal__background {
+  @include flex-cl-c-c;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.modal__container {
+  @include shadow;
+  min-width: 600px;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: white;
+
+  .text-input {
+    margin-bottom: 20px;
+  }
+}
+
+.modal__headline {
+  text-align: center;
+  margin-bottom: 40px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  small {
+    color: $black-50;
+  }
+}
+
+.modal__form {
+  @include flex-cl-fs-c;
+  width: 100%;
+
+  .text-area {
+    margin-bottom: 40px;
+  }
+
+  .button {
+    @include shadow-small;
+  }
+}

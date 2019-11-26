@@ -6,6 +6,14 @@ import { Link } from 'react-router-dom';
 import Logo from 'components/logo';
 
 const Header = (props) => {
+  const { setContactModal } = props;
+
+  // toggles contact modal
+  const toggleContactModal = (e) => {
+    e.preventDefault();
+    setContactModal(true);
+  };
+
   return (
     <div className="header">
       <div className="header__content">
@@ -13,9 +21,11 @@ const Header = (props) => {
           <Logo />
         </div>
         <div className="header__menu">
-          <Link to="/projects">Projects</Link>
           <Link to="/who-i-am">Who I Am</Link>
-          <Link to="/coaching">Coaching</Link>
+          <Link to="/projects">My Projects</Link>
+          <a href="" onClick={(e) => toggleContactModal(e)}>
+            Contact
+          </a>
         </div>
       </div>
     </div>
