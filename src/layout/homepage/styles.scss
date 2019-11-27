@@ -21,6 +21,12 @@
   @include flex-rw-sb-c;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  @media (max-width: $large) {
+    @include flex-cl-fs-c;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .homepage__headline-text {
@@ -28,9 +34,22 @@
   margin-right: 20px;
   box-sizing: border-box;
 
+  @media (max-width: $large) {
+    @include flex-cl-c-c;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
   p {
     margin-top: 30px;
     margin-bottom: 30px;
+
+    @media (max-width: $large) {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -38,6 +57,11 @@
   width: 50%;
   margin-left: 20px;
   box-sizing: border-box;
+
+  @media (max-width: $large) {
+    width: 100%;
+    margin: 0;
+  }
 
   pre {
     @include shadow;
@@ -51,4 +75,13 @@
 .homepage__schedule-call {
   @include flex-rw-sb-c;
   width: 100%;
+
+  @media (max-width: $large) {
+    @include flex-cl-c-c;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
 }

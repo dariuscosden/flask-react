@@ -5,7 +5,7 @@ import React from 'react';
 const classNames = require('classnames');
 
 const Button = (props) => {
-  const { disabled, secondary, onClick, text } = props;
+  const { disabled, secondary, onClick, style, text } = props;
 
   // classnames
   const className = classNames({
@@ -38,6 +38,7 @@ const Button = (props) => {
       onMouseUp={disabled ? null : release}
       onTouchStart={disabled ? null : pushDown}
       onTouchEnd={disabled ? null : release}
+      style={style}
     >
       {text}
     </button>

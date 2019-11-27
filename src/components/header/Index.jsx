@@ -27,6 +27,8 @@ const Header = (props) => {
             Contact
           </a>
         </div>
+
+        <div className="header__mobile-menu-toggle">Menu</div>
       </div>
     </div>
   );

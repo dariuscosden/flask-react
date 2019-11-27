@@ -3,7 +3,8 @@
 
 .header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   background-color: white;
   padding: 20px;
@@ -29,6 +30,10 @@
   @include flex-rw-fe-c;
   width: 80%;
 
+  @media (max-width: $large) {
+    display: none;
+  }
+
   a {
     @include ease-03;
     color: black;
@@ -43,5 +48,13 @@
       color: $main-yellow;
       transform: translateY(-2px);
     }
+  }
+}
+
+.header__mobile-menu-toggle {
+  display: none;
+
+  @media (max-width: $large) {
+    display: block;
   }
 }
