@@ -1,0 +1,143 @@
+// layout - coaching
+//
+
+.coaching {
+  @include top-padding;
+}
+
+.coaching__section-bg {
+  &.main-purple {
+    background: linear-gradient(to left, $main-purple, $main-purple-dark);
+    position: relative;
+    color: white;
+
+    p {
+      color: white;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background-size: 20px 40px;
+      background-image: radial-gradient(
+        circle at 10px -15px,
+        transparent 20px,
+        white 21px
+      );
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      background-size: 40px 40px;
+      background-image: radial-gradient(
+        circle at 10px 26px,
+        white 20px,
+        transparent 21px
+      );
+    }
+  }
+
+  &.white {
+    background-color: white;
+  }
+
+  &.light-purple {
+    background-color: $light-purple;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background-size: 20px 40px;
+      background-image: radial-gradient(
+        circle at 10px -15px,
+        transparent 20px,
+        white 21px
+      );
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      background-size: 40px 40px;
+      background-image: radial-gradient(
+        circle at 10px 26px,
+        white 20px,
+        transparent 21px
+      );
+    }
+  }
+}
+
+.coaching__section {
+  @include container-styles;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .program {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+
+    .program-step {
+      margin-bottom: 100px;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+
+      .number {
+        font-size: 72px;
+        color: $black-10;
+      }
+    }
+  }
+}
+
+.coaching__section-headline {
+  margin-bottom: 75px;
+  text-align: center;
+
+  h1 {
+    color: $main-purple;
+  }
+
+  h2 {
+    color: $black-50;
+  }
+}
+
+.coaching__section-subheadline {
+  text-align: center;
+}
+
+.coaching__schedule-call {
+  @include flex-rw-sb-c;
+  width: 100%;
+
+  @media (max-width: $large) {
+    @include flex-cl-c-c;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
+}

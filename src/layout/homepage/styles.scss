@@ -6,13 +6,83 @@
 }
 
 .homepage__section-bg {
-  &.main-yellow {
-    background-color: $main-yellow;
+  &.main-purple {
+    background: linear-gradient(to left, $main-purple, $main-purple-dark);
+    position: relative;
+    color: white;
+
+    p {
+      color: white;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background-size: 20px 40px;
+      background-image: radial-gradient(
+        circle at 10px -15px,
+        transparent 20px,
+        white 21px
+      );
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      background-size: 40px 40px;
+      background-image: radial-gradient(
+        circle at 10px 26px,
+        white 20px,
+        transparent 21px
+      );
+    }
   }
 
-  &.dark-gray {
-    background-color: $dark-gray;
-    color: white;
+  &.white {
+    background-color: white;
+  }
+
+  &.light-purple {
+    background-color: $light-purple;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 10px;
+      background-size: 20px 40px;
+      background-image: radial-gradient(
+        circle at 10px -15px,
+        transparent 20px,
+        white 21px
+      );
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15px;
+      background-size: 40px 40px;
+      background-image: radial-gradient(
+        circle at 10px 26px,
+        white 20px,
+        transparent 21px
+      );
+    }
   }
 }
 
@@ -53,7 +123,7 @@
   }
 }
 
-.homepage__headline-code {
+.homepage__headline-image {
   width: 50%;
   margin-left: 20px;
   box-sizing: border-box;
@@ -63,12 +133,145 @@
     margin: 0;
   }
 
-  pre {
-    @include shadow;
-    border-radius: 10px;
-    min-height: 400px;
-    max-width: 500px;
-    margin-left: auto;
+  img {
+    width: 100%;
+  }
+}
+
+.homepage__section-headline {
+  margin-bottom: 75px;
+  text-align: center;
+
+  h1 {
+    color: $main-purple;
+  }
+
+  h2 {
+    color: $black-50;
+  }
+}
+
+.homepage__what-i-do {
+  @include flex-cl-c-c;
+  width: 100%;
+
+  .content-row {
+    @include flex-rw-sb-c;
+    width: 100%;
+    margin-bottom: 40px;
+
+    img {
+      width: 50%;
+      margin: auto;
+      display: block;
+    }
+
+    h2 {
+      color: $main-purple;
+    }
+
+    p {
+      color: $black-50;
+      margin: 30px 0;
+    }
+
+    .number {
+      font-size: 72px;
+      color: $black-10;
+    }
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
+    }
+  }
+}
+
+.homepage__choose-me {
+  width: 100%;
+
+  .reasons-wrapper {
+    @include flex-rw-sb-c;
+    align-items: unset;
+
+    .reason {
+      @include flex-cl-c-c;
+      @include shadow-light;
+      width: 30%;
+      margin: 0 20px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-sizing: border-box;
+      text-align: center;
+
+      &:nth-child(2) {
+        transform: translateY(35px);
+      }
+
+      i {
+        color: $main-purple;
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: $main-purple;
+      }
+    }
+  }
+}
+
+.homepage__testimonials {
+  width: 100%;
+
+  .testimonials-wrapper {
+    @include flex-rw-sb-c;
+    align-items: unset;
+    margin-bottom: 100px;
+
+    .testimonial {
+      @include flex-cl-c-fs;
+      @include shadow-light;
+      width: 30%;
+      margin: 0 20px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-sizing: border-box;
+
+      &:nth-child(2) {
+        transform: translateY(35px);
+      }
+
+      i {
+        color: $main-purple;
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: $main-purple;
+        margin-bottom: 5px;
+      }
+
+      small {
+        color: $black-50;
+      }
+    }
+  }
+
+  .projects-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+    img {
+      width: 150px;
+    }
   }
 }
 

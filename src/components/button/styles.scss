@@ -3,16 +3,24 @@
 
 .button {
   @include button-base-styles;
-  @include shadow;
+  @include ease-03;
   position: relative;
   color: white;
-  background-color: $dark-gray;
+  background-color: $main-purple;
   text-transform: uppercase;
   min-width: 200px;
 
+  &:hover {
+    background-color: $main-purple-dark;
+  }
+
   &.is-secondary {
-    background-color: $main-yellow;
-    color: $dark-gray;
+    background-color: white;
+    color: black;
+
+    &:hover {
+      background-color: $white-hover;
+    }
   }
 
   .indicator {

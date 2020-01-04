@@ -12,6 +12,10 @@ import Footer from 'components/footer';
 import ContactModal from './contact-modal';
 
 import Homepage from './homepage';
+import Development from './development';
+import Coaching from './coaching';
+
+import history from 'utils/history';
 
 const Layout = (props) => {
   // modal
@@ -21,6 +25,11 @@ const Layout = (props) => {
   const contentClassNames = classNames({
     content: true,
     'modal-open': contactModal,
+  });
+
+  // history
+  history.listen(() => {
+    window.scrollTo(0, 0);
   });
 
   return (
@@ -34,6 +43,16 @@ const Layout = (props) => {
               exact
               path="/"
               render={() => <Homepage setContactModal={setContactModal} />}
+            />
+            <Route
+              exact
+              path="/development"
+              render={() => <Development setContactModal={setContactModal} />}
+            />
+            <Route
+              exact
+              path="/coaching"
+              render={() => <Coaching setContactModal={setContactModal} />}
             />
           </Switch>
         </div>

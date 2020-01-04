@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: hack;
+  font-family: avenir;
 }
 
 p {
@@ -14,9 +14,9 @@ p {
 
 h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 40px;
 
-  @media (min-width: $large) {
+  @media (max-width: $large) {
     font-size: 18px;
   }
 }
@@ -24,7 +24,7 @@ h1 {
 h2 {
   font-size: 20px;
 
-  @media (min-width: $large) {
+  @media (max-width: $large) {
     font-size: 16px;
   }
 }
@@ -32,7 +32,6 @@ h2 {
 #app {
   height: 100vh;
   position: relative;
-  background-color: $dark-gray-light;
 }
 
 .content {
@@ -47,10 +46,16 @@ h2 {
 
 .content-body {
   width: 100%;
-  background-color: $dark-gray-light;
 }
 
 .content-footer {
   @include flex-rw-c-c;
   width: 100%;
+}
+
+.separator {
+  height: 5px;
+  width: 40px;
+  background-color: white;
+  margin: 30px 0;
 }

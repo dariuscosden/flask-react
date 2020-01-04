@@ -14,14 +14,13 @@ textarea {
   box-sizing: border-box;
   transition: box-shadow 150ms ease-out;
   position: relative;
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid black;
   min-height: 100px;
-  font-family: hack;
   resize: vertical;
   max-height: 400px;
 
   &.is-focused {
-    border-bottom: 3px solid $main-yellow;
+    border-bottom: 2px solid $main-purple;
     transition: all 0.15s ease;
   }
 }

@@ -14,31 +14,15 @@ input[type='text'] {
   box-sizing: border-box;
   transition: box-shadow 150ms ease-out;
   position: relative;
-  border-bottom: 3px solid black;
-  font-family: hack;
+  border-bottom: 2px solid black;
 
   &.is-focused {
-    border-bottom: 3px solid $main-yellow;
+    border-bottom: 2px solid $main-purple;
     transition: all 0.15s ease;
   }
 }
 
 label {
-  &.is-text {
-    position: absolute;
-    cursor: text;
-    left: 0px;
-    top: 10px;
-    font-size: 14px;
-    color: $black-50;
-    z-index: 10;
-    transition: transform 150ms ease-out, font-size 150ms ease-out;
-    pointer-events: none;
-
-    &.is-focused {
-      transform: translateY(-30px);
-      font-size: 0.75em;
-      cursor: default;
-    }
-  }
+  font-size: 14px;
+  color: $black-50;
 }
