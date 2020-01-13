@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 
+// external dependencies
+const axios = require('axios');
+
 // internal dependenies
 //
 import TextInput from 'components/text-input';
@@ -8,6 +11,11 @@ import Button from 'components/button';
 
 const Modal = (props) => {
   const { closeModal } = props;
+
+  // state
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [message, setMessage] = useState(null);
 
   // modal background
   const modalBackground = useRef(null);
@@ -20,6 +28,34 @@ const Modal = (props) => {
   useEffect(() => {
     modalContainer.current.style.transform = 'translateY(0px)';
   }, [modalContainer]);
+
+  // submits form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setError(false);
+    setLoading(true);
+
+    const elements = e.target.elements;
+
+    // form data
+    const formData = new FormData();
+
+    Array.from(elements).map((element) => {
+      formData.append(element.name, element.value);
+    });
+
+    axios
+      .post('/api/v1/contact', formData)
+      .then((response) => {
+        setLoading(false);
+        setMessage('Message sent successfully!');
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.response.data.message);
+      });
+  };
 
   return (
     <div
@@ -46,10 +82,12 @@ const Modal = (props) => {
             </a>
           </div>
 
-          <form className="modal__form">
-            <TextInput label="What is your email?" />
-            <TextArea label="What is your message?" />
-            <Button text="Submit" />
+          <form className="modal__form" onSubmit={handleSubmit}>
+            <TextInput name="email" label="What is your email?" />
+            <TextArea name="message" label="What is your message?" />
+            <Button text={loading ? 'Sending...' : 'Submit'} />
+            {error && <span className="error">{error}</span>}
+            {message && <span className="message">{message}</span>}
           </form>
         </div>
       </div>

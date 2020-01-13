@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const classNames = require('classnames');
 
 const TextArea = (props) => {
-  const { label, defaultValue } = props;
+  const { name, label, defaultValue } = props;
 
   // value
   const [value, setValue] = useState(defaultValue || '');
@@ -29,6 +29,7 @@ const TextArea = (props) => {
       <textarea
         className={inputClassNames}
         value={value}
+        name={name}
         onFocus={() => setFocused(true)}
         onBlur={!value ? () => setFocused(false) : null}
         onChange={(e) => setValue(e.target.value)}

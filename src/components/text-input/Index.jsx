@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const classNames = require('classnames');
 
 const TextInput = (props) => {
-  const { label, defaultValue } = props;
+  const { name, label, defaultValue } = props;
 
   // value
   const [value, setValue] = useState(defaultValue || '');
@@ -28,6 +28,7 @@ const TextInput = (props) => {
       <label className={labelClassNames}>{label}</label>
       <input
         type="text"
+        name={name}
         className={inputClassNames}
         value={value}
         onFocus={() => setFocused(true)}

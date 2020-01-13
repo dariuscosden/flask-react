@@ -78,6 +78,7 @@
 .modal__form {
   @include flex-cl-fs-c;
   width: 100%;
+  position: relative;
 
   .text-area {
     margin-bottom: 40px;
@@ -86,4 +87,16 @@
   .button {
     @include shadow-small;
   }
+}
+
+.error {
+  position: absolute;
+  bottom: -40px;
+  color: red;
+}
+
+.message {
+  position: absolute;
+  bottom: -40px;
+  color: green;
 }

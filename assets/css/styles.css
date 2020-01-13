@@ -573,12 +573,25 @@ label {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .modal__form .text-area {
   margin-bottom: 40px;
 }
 .modal__form .button {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+  position: absolute;
+  bottom: -40px;
+  color: red;
+}
+
+.message {
+  position: absolute;
+  bottom: -40px;
+  color: green;
 }
 
 .development {
