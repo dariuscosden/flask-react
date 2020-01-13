@@ -11,26 +11,36 @@ const Development = (props) => {
     <>
       <div className="development">
         <div className="development__section-bg light-purple">
-          <div className="development__section">
-            <div className="development__section-headline">
-              <h2>Hire Me For Web App Development</h2>
-              <h1>Development</h1>
+          <div className="development__section first">
+            <div className="development__section-image">
+              <img src="/assets/img/shared/development.png" />
             </div>
+            <div className="development__section-content">
+              <div className="development__section-headline">
+                <h2>Hire Me For Web App Development</h2>
+                <h1>Development</h1>
+              </div>
 
-            <div className="development__section-subheadline">
-              <p>
-                I am a full-stack web developer and I specialize in building
-                single page applications (SPA's) with React. I can build out the
-                front-end as well as the back-end for a fully functional web
-                application that is fully customized to your needs.
-              </p>
+              <div className="development__section-subheadline">
+                <p>
+                  I am a full-stack web developer and I specialize in building
+                  single page applications (SPA's) with React. I can build out
+                  the front-end as well as the back-end for a fully functional
+                  web application that is fully customized to your needs.
+                </p>
+              </div>
+
+              <Button
+                text="Get In Touch"
+                onClick={() => setContactModal(true)}
+              />
             </div>
           </div>
         </div>
 
         <div className="development__section-bg">
-          <div className="development__section">
-            <div className="development__section-headline">
+          <div className="development__section column">
+            <div className="development__section-headline centered">
               <h2>See My Previous Work</h2>
               <h1>Projects</h1>
             </div>
@@ -38,22 +48,22 @@ const Development = (props) => {
             <div className="projects-container">
               <div className="project">
                 <div className="project-image left">
-                  <img src="/assets/img/development/projects-start.png" />
+                  <img src="/assets/img/development/projects-convert.png" />
                 </div>
 
                 <div className="project-content">
-                  <h2>st-Art Amsterdam</h2>
+                  <h2>Let's Convert</h2>
                   <p>
-                    This project consisted of building an online art gallery
-                    where artists could upload their artworks and display them
-                    for buyers to purchase. It also included events and the
-                    ability for users to RSVP, as well as a custom built
-                    administration panel to manage the application content for
-                    the administrators.
+                    This project consisted of building an image converter that
+                    would allow users to efficiently transform one image format
+                    to another. It included 9 different conversion formats, a
+                    fully integrated payment system with enforced limits and
+                    variable tiers, a custom built api to allow 3rd parties to
+                    convert easily, and a fully custom user dashboard.
                   </p>
                   <a
                     className="button"
-                    href="https://www.st-artamsterdam.com"
+                    href="https://www.letsconvert.app"
                     target="_blank"
                   >
                     View Project
@@ -61,7 +71,7 @@ const Development = (props) => {
                 </div>
               </div>
 
-              <div className="project">
+              <div className="project mobile-inverted">
                 <div className="project-content">
                   <h2>Kiid Babysitting</h2>
                   <p>
@@ -106,6 +116,31 @@ const Development = (props) => {
                   >
                     View Project
                   </a>
+                </div>
+              </div>
+
+              <div className="project mobile-inverted">
+                <div className="project-content">
+                  <h2>st-Art Amsterdam</h2>
+                  <p>
+                    This project consisted of building an online art gallery
+                    where artists could upload their artworks and display them
+                    for buyers to purchase. It also included events and the
+                    ability for users to RSVP, as well as a custom built
+                    administration panel to manage the application content for
+                    the administrators.
+                  </p>
+                  <a
+                    className="button"
+                    href="https://www.st-artamsterdam.com"
+                    target="_blank"
+                  >
+                    View Project
+                  </a>
+                </div>
+
+                <div className="project-image right">
+                  <img src="/assets/img/development/projects-start.png" />
                 </div>
               </div>
             </div>

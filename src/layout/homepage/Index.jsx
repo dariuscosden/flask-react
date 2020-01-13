@@ -18,7 +18,7 @@ const Homepage = (props) => {
     <>
       <div className="homepage">
         <div className="homepage__section-bg main-purple">
-          <div className="homepage__section">
+          <div className="homepage__section mobile-inverted">
             <div className="homepage__headline-text">
               <h1>Custom web solutions tailored to your needs.</h1>
               <hr className="separator" />
@@ -50,7 +50,7 @@ const Homepage = (props) => {
 
             <div className="content-row">
               <div className="left">
-                <img src="/assets/img/homepage/homepage2-1.png" />
+                <img src="/assets/img/shared/development.png" />
               </div>
 
               <div className="right">
@@ -87,7 +87,7 @@ const Homepage = (props) => {
               </div>
 
               <div className="right">
-                <img src="/assets/img/homepage/homepage2-2.png" />
+                <img src="/assets/img/shared/coaching.png" />
               </div>
             </div>
           </div>
@@ -136,6 +136,7 @@ const Homepage = (props) => {
       <div className="homepage__section-bg white">
         <div className="homepage__section">
           <div className="homepage__testimonials">
+            {/*
             <div className="homepage__section-headline">
               <h2>What Do My Clients Say?</h2>
               <h1>Testimonials</h1>
@@ -182,6 +183,7 @@ const Homepage = (props) => {
                 <small>Bashir Persian Rugs</small>
               </div>
             </div>
+*/}
 
             <div className="projects-wrapper">
               <div className="homepage__section-headline">

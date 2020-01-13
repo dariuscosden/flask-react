@@ -47,7 +47,7 @@ const Header = (props) => {
           className="header__mobile-menu-toggle"
           onClick={() => setShowMenu(true)}
         >
-          Menu
+          <i className="fas fa-bars" />
         </div>
 
         <div ref={mobileMenu} className="header__mobile-menu">
@@ -59,15 +59,27 @@ const Header = (props) => {
           </div>
 
           <div className="header__mobile-menu-links">
-            <NavLink to="/development" onClick={() => setShowMenu(false)}>
+            <NavLink
+              to="/development"
+              onClick={() => setShowMenu(false)}
+              activeClassName="active"
+            >
               Development
             </NavLink>
-            <NavLink to="/coaching" onClick={() => setShowMenu(false)}>
+            <NavLink
+              to="/coaching"
+              onClick={() => setShowMenu(false)}
+              activeClassName="active"
+            >
               Coaching
             </NavLink>
             <a href="" onClick={(e) => toggleContactModal(e)}>
               Contact
             </a>
+          </div>
+
+          <div className="header__mobile-menu-logo">
+            <Logo />
           </div>
         </div>
       </div>

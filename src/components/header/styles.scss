@@ -59,6 +59,7 @@
 
   @media (max-width: $large) {
     display: block;
+    font-size: 24px;
   }
 }
 
@@ -87,9 +88,15 @@
 
 .header__mobile-menu-links {
   @include flex-cl-fs-fs;
+  margin-bottom: 40px;
 
   a {
     margin-bottom: 20px;
+    text-decoration: none;
+
+    &.active {
+      color: $main-purple;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -97,6 +104,16 @@
 
     &:visited {
       color: black;
+
+      &.active {
+        color: $main-purple;
+      }
     }
+  }
+}
+
+.header__mobile-menu-logo {
+  img {
+    width: 80%;
   }
 }

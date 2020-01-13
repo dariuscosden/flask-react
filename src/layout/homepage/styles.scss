@@ -96,6 +96,10 @@
     @include flex-cl-fs-c;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    &.mobile-inverted {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -131,6 +135,7 @@
   @media (max-width: $large) {
     width: 100%;
     margin: 0;
+    margin-bottom: 40px;
   }
 
   img {
@@ -141,6 +146,10 @@
 .homepage__section-headline {
   margin-bottom: 75px;
   text-align: center;
+
+  @media (max-width: $large) {
+    margin-bottom: 25px;
+  }
 
   h1 {
     color: $main-purple;
@@ -160,10 +169,23 @@
     width: 100%;
     margin-bottom: 40px;
 
+    @media (max-width: $large) {
+      @include flex-cl-c-c;
+      text-align: center;
+
+      &:nth-child(3) {
+        @include flex-clr-c-c;
+      }
+    }
+
     img {
       width: 50%;
       margin: auto;
       display: block;
+
+      @media (max-width: $large) {
+        width: 100%;
+      }
     }
 
     h2 {
@@ -182,10 +204,20 @@
 
     .left {
       width: 50%;
+
+      @media (max-width: $large) {
+        @include flex-cl-c-c;
+        width: 100%;
+      }
     }
 
     .right {
       width: 50%;
+
+      @media (max-width: $large) {
+        @include flex-cl-c-c;
+        width: 100%;
+      }
     }
   }
 }
@@ -196,6 +228,10 @@
   .reasons-wrapper {
     @include flex-rw-sb-c;
     align-items: unset;
+
+    @media (max-width: $large) {
+      @include flex-cl-c-c;
+    }
 
     .reason {
       @include flex-cl-c-c;
@@ -208,8 +244,17 @@
       box-sizing: border-box;
       text-align: center;
 
+      @media (max-width: $large) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
       &:nth-child(2) {
         transform: translateY(35px);
+
+        @media (max-width: $large) {
+          transform: unset;
+        }
       }
 
       i {
@@ -233,6 +278,11 @@
     align-items: unset;
     margin-bottom: 100px;
 
+    @media (max-width: $large) {
+      @include flex-cl-c-c;
+      margin-bottom: 20px;
+    }
+
     .testimonial {
       @include flex-cl-c-fs;
       @include shadow-light;
@@ -243,8 +293,17 @@
       padding: 40px;
       box-sizing: border-box;
 
+      @media (max-width: $large) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
       &:nth-child(2) {
         transform: translateY(35px);
+
+        @media (max-width: $large) {
+          transform: unset;
+        }
       }
 
       i {
@@ -285,6 +344,10 @@
 
     h1 {
       margin-bottom: 40px;
+    }
+
+    button {
+      margin-bottom: 20px;
     }
   }
 }

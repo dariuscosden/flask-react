@@ -11,26 +11,36 @@ const Coaching = (props) => {
     <>
       <div className="coaching">
         <div className="coaching__section-bg light-purple">
-          <div className="coaching__section">
-            <div className="coaching__section-headline">
-              <h2>Hire Me For React Coaching</h2>
-              <h1>Coaching</h1>
-            </div>
+          <div className="coaching__section first">
+            <div className="coaching__section-content">
+              <div className="coaching__section-headline">
+                <h2>Hire Me For React Coaching</h2>
+                <h1>Coaching</h1>
+              </div>
 
-            <div className="coaching__section-subheadline">
-              <p>
-                I offer an online coaching service to teach React. I will work
-                with you individually to bring you to the expected standard of a
-                React developer. This program is designed for people who want to
-                quickly learn React and get straight to coding.
-              </p>
+              <div className="coaching__section-subheadline">
+                <p>
+                  I offer an online coaching service to teach React. I will work
+                  with you individually to bring you to the expected standard of
+                  a React developer. This program is designed for people who
+                  want to quickly learn React and get straight to coding.
+                </p>
+              </div>
+
+              <Button
+                text="Get In Touch"
+                onClick={() => setContactModal(true)}
+              />
+            </div>
+            <div className="coaching__section-image">
+              <img src="/assets/img/shared/coaching.png" />
             </div>
           </div>
         </div>
       </div>
 
       <div className="coaching__section-bg">
-        <div className="coaching__section">
+        <div className="coaching__section column">
           <div className="coaching__section-headline">
             <h2>How You'll Learn React</h2>
             <h1>The Program</h1>

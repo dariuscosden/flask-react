@@ -41,6 +41,10 @@
 .modal__left {
   width: 50%;
 
+  @media (max-width: $large) {
+    display: none;
+  }
+
   img {
     width: 100%;
   }
@@ -48,6 +52,10 @@
 
 .modal__right {
   width: 50%;
+
+  @media (max-width: $large) {
+    width: 100%;
+  }
 }
 
 .modal__headline {
