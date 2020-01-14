@@ -7,6 +7,11 @@ import Button from 'components/button';
 const Coaching = (props) => {
   const { setContactModal } = props;
 
+  // sets page title
+  useEffect(() => {
+    document.title = 'Coaching | Cosden Solutions';
+  });
+
   return (
     <>
       <div className="coaching">

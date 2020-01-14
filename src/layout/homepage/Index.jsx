@@ -14,6 +14,11 @@ import history from 'utils/history';
 const Homepage = (props) => {
   const { setContactModal } = props;
 
+  // sets page title
+  useEffect(() => {
+    document.title = 'Cosden Solutions';
+  });
+
   return (
     <>
       <div className="homepage">
