@@ -1,12 +1,9 @@
 Click==7.0
-et-xmlfile==1.0.1
-Flask==1.1.1
-Flask-SQLAlchemy==2.4.1
+Flask==1.0.2
+Flask-SQLAlchemy==2.3.2
 itsdangerous==1.1.0
-jdcal==1.4.1
-Jinja2==2.10.3
-MarkupSafe==1.1.1
--e git+https://github.com/dariuscosden/flask-react.git@ea9379edb57fc4b394c2ec652578488ef708f23e#egg=Server
-SQLAlchemy==1.3.11
-Unidecode==1.1.1
-Werkzeug==0.16.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+SQLAlchemy==1.2.14
+Unidecode==1.0.22
+Werkzeug==0.14.1
