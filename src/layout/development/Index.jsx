@@ -37,6 +37,9 @@ const Development = (props) => {
             </div>
           </div>
         </div>
+        <div className="wave-container">
+          <div className="wave light-purple" />
+        </div>
 
         <div className="development__section-bg">
           <div className="development__section column">

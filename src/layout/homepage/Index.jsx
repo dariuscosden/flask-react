@@ -38,6 +38,9 @@ const Homepage = (props) => {
             </div>
           </div>
         </div>
+        <div className="wave-container">
+          <div className="wave" />
+        </div>
       </div>
 
       <div className="homepage__section-bg white">
@@ -131,6 +134,9 @@ const Homepage = (props) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="wave-container">
+        <div className="wave light-purple" />
       </div>
 
       <div className="homepage__section-bg white">

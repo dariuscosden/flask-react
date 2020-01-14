@@ -21,7 +21,7 @@ const Header = (props) => {
     if (showMenu) {
       mobileMenu.current.style.right = '0px';
     } else {
-      mobileMenu.current.style.right = '-300px';
+      mobileMenu.current.style.right = '-80%';
     }
   }, [showMenu]);
 

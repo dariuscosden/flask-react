@@ -7,42 +7,12 @@
 
 .homepage__section-bg {
   &.main-purple {
-    background: linear-gradient(to left, $main-purple, $main-purple-dark);
+    background-color: $main-purple;
     position: relative;
     color: white;
 
     p {
       color: white;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 10px;
-      background-size: 20px 40px;
-      background-image: radial-gradient(
-        circle at 10px -15px,
-        transparent 20px,
-        white 21px
-      );
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 15px;
-      background-size: 40px 40px;
-      background-image: radial-gradient(
-        circle at 10px 26px,
-        white 20px,
-        transparent 21px
-      );
     }
   }
 
@@ -53,36 +23,6 @@
   &.light-purple {
     background-color: $light-purple;
     position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 10px;
-      background-size: 20px 40px;
-      background-image: radial-gradient(
-        circle at 10px -15px,
-        transparent 20px,
-        white 21px
-      );
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 15px;
-      background-size: 40px 40px;
-      background-image: radial-gradient(
-        circle at 10px 26px,
-        white 20px,
-        transparent 21px
-      );
-    }
   }
 }
 
@@ -350,4 +290,62 @@
       margin-bottom: 20px;
     }
   }
+}
+
+.wave-container {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.wave {
+  display: block;
+  position: relative;
+  height: 40px;
+  background-color: $main-purple;
+  transform: translateY(-5px);
+
+  &.light-purple {
+    background-color: $light-purple;
+
+    &::after {
+      background-color: $light-purple;
+    }
+  }
+
+  &.inverted {
+    background-color: white;
+
+    &::before {
+      background-color: $main-purple;
+    }
+
+    &::after {
+      background-color: white;
+    }
+  }
+}
+
+.wave:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  right: -25%;
+  top: 20px;
+}
+
+.wave:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: $main-purple;
+  left: -25%;
+  top: -240px;
 }

@@ -37,6 +37,9 @@ const Coaching = (props) => {
             </div>
           </div>
         </div>
+        <div className="wave-container">
+          <div className="wave light-purple" />
+        </div>
       </div>
 
       <div className="coaching__section-bg">

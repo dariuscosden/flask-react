@@ -14,36 +14,6 @@
     p {
       color: white;
     }
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 10px;
-      background-size: 20px 40px;
-      background-image: radial-gradient(
-        circle at 10px -15px,
-        transparent 20px,
-        white 21px
-      );
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 15px;
-      background-size: 40px 40px;
-      background-image: radial-gradient(
-        circle at 10px 26px,
-        white 20px,
-        transparent 21px
-      );
-    }
   }
 
   &.white {
@@ -53,36 +23,6 @@
   &.light-purple {
     background-color: $light-purple;
     position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 10px;
-      background-size: 20px 40px;
-      background-image: radial-gradient(
-        circle at 10px -15px,
-        transparent 20px,
-        white 21px
-      );
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 15px;
-      background-size: 40px 40px;
-      background-image: radial-gradient(
-        circle at 10px 26px,
-        white 20px,
-        transparent 21px
-      );
-    }
   }
 }
 
