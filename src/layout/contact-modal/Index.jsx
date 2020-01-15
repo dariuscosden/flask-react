@@ -75,7 +75,7 @@ const Modal = (props) => {
         <div className="modal__right">
           <div className="modal__headline">
             <h2>Get in touch with us</h2>
-            <a href="mailto:me@cosden.io">
+            <a href="mailto:contact@cosdensolutions.io">
               <small>
                 <i>contact@cosdensolutions.io</i>
               </small>

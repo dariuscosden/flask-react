@@ -29,14 +29,14 @@ def contact():
 
     msg = MIMEText(request.form['message'])
     msg['Subject'] = "I'd like to get in touch"
-    msg['From'] = "contact@cosden.io"
-    msg['To'] = "me@cosden.io"
+    msg['From'] = "contact@cosdensolutions.io"
+    msg['To'] = "contact@cosdensolutions.io"
     msg['Reply-To'] = request.form['email']
 
     s = smtplib.SMTP('smtp.eu.mailgun.org', 587)
 
-    s.login('postmaster@cosden.io',
-            'c33fbb4335b64a8ecb0f789764454b76-0a4b0c40-953dcbdc')
+    s.login(app.config['MAILGUN_USERNAME'],
+            app.config['MAILGUN_PASSWORD'])
     s.sendmail(msg['From'], msg['To'], msg.as_string())
     s.quit()
 
