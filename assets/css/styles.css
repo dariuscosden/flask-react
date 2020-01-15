@@ -127,7 +127,7 @@ h2 {
   top: 0;
   width: 100%;
   background-color: white;
-  padding: 20px;
+  padding: 20px 40px;
   box-sizing: border-box;
   z-index: 100;
 }
@@ -145,7 +145,7 @@ h2 {
   width: 20%;
 }
 .header__logo img {
-  width: 150px;
+  width: 250px;
 }
 
 .header__menu {
@@ -302,7 +302,7 @@ label {
 }
 
 .coaching {
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .coaching__section-bg.main-purple {
@@ -563,7 +563,7 @@ label {
 }
 
 .development {
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .development__section-bg.main-purple {
@@ -756,7 +756,7 @@ label {
 }
 
 .homepage {
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .homepage__section-bg.main-purple {

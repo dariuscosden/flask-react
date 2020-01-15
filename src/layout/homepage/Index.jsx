@@ -16,7 +16,7 @@ const Homepage = (props) => {
 
   // sets page title
   useEffect(() => {
-    document.title = 'Cosden Solutions';
+    document.title = 'Home | Cosden Solutions';
   });
 
   return (
@@ -25,7 +25,7 @@ const Homepage = (props) => {
         <div className="homepage__section-bg main-purple">
           <div className="homepage__section mobile-inverted">
             <div className="homepage__headline-text">
-              <h1>Custom web solutions tailored to your needs.</h1>
+              <h1>Custom web solutions tailored to your needs</h1>
               <hr className="separator" />
               <p>
                 We build fully featured web applications using the latest
@@ -84,9 +84,9 @@ const Homepage = (props) => {
 
                 <h2>Online Coaching For React</h2>
                 <p>
-                  Do you need to learn React? We provide online coaching
-                  services that will teach you React in about a month’s time.
-                  You will fully learn React, be able to code proficiently with
+                  We provide online coaching services that will teach you React
+                  in about a month’s time. This is an accelerated program where
+                  you will fully learn React, be able to code proficiently with
                   it, and have a fully functional project built to show for it.
                 </p>
                 <Button
@@ -115,8 +115,8 @@ const Homepage = (props) => {
                 <i className="fas fa-clock" />
                 <h2>Always On Time</h2>
                 <p>
-                  We provide accurate timeframes and we am reliable when it
-                  comes to getting things done on time, or sometimes early.
+                  We provide accurate timeframes and we are reliable when it
+                  comes to getting things done on time, or even sometimes early.
                 </p>
               </div>
               <div className="reason">
@@ -124,8 +124,8 @@ const Homepage = (props) => {
                 <h2>Hard Working</h2>
                 <p>
                   We are hard working and very efficient. We love what we do and
-                  we are dedicated to doing whatever is necessary to get the
-                  task done.
+                  we are dedicated to doing whatever is necessary to get the job
+                  done.
                 </p>
               </div>
               <div className="reason">
