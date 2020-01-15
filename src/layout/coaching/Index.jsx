@@ -19,16 +19,17 @@ const Coaching = (props) => {
           <div className="coaching__section first">
             <div className="coaching__section-content">
               <div className="coaching__section-headline">
-                <h2>Hire Me For React Coaching</h2>
+                <h2>Hire Us For React Coaching</h2>
                 <h1>Coaching</h1>
               </div>
 
               <div className="coaching__section-subheadline">
                 <p>
-                  I offer an online coaching service to teach React. I will work
-                  with you individually to bring you to the expected standard of
-                  a React developer. This program is designed for people who
-                  want to quickly learn React and get straight to coding.
+                  We offer an online coaching service to teach React. We will
+                  work with you individually to bring you to the expected
+                  standard of a React developer. This program is designed for
+                  people who want to quickly learn React and get straight to
+                  coding.
                 </p>
               </div>
 
@@ -49,7 +50,7 @@ const Coaching = (props) => {
 
       <div className="coaching__section-bg">
         <div className="coaching__section column">
-          <div className="coaching__section-headline">
+          <div className="coaching__section-headline center">
             <h2>How You'll Learn React</h2>
             <h1>The Program</h1>
           </div>

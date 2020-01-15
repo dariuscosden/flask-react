@@ -22,16 +22,17 @@ const Development = (props) => {
             </div>
             <div className="development__section-content">
               <div className="development__section-headline">
-                <h2>Hire Me For Web App Development</h2>
+                <h2>Hire Us For Web App Development</h2>
                 <h1>Development</h1>
               </div>
 
               <div className="development__section-subheadline">
                 <p>
-                  I am a full-stack web developer and I specialize in building
-                  single page applications (SPA's) with React. I can build out
-                  the front-end as well as the back-end for a fully functional
-                  web application that is fully customized to your needs.
+                  We are a full-stack web developer team and we specialize in
+                  building single page applications (SPA's) with React. We can
+                  build out the front-end as well as the back-end for a fully
+                  functional web application that is fully customized to your
+                  needs.
                 </p>
               </div>
 
@@ -49,7 +50,7 @@ const Development = (props) => {
         <div className="development__section-bg">
           <div className="development__section column">
             <div className="development__section-headline centered">
-              <h2>See My Previous Work</h2>
+              <h2>See Our Previous Work</h2>
               <h1>Projects</h1>
             </div>
 

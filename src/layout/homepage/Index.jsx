@@ -28,9 +28,9 @@ const Homepage = (props) => {
               <h1>Custom web solutions tailored to your needs.</h1>
               <hr className="separator" />
               <p>
-                I build fully featured web applications using the latest
-                technologies and frameworks available. I offer a great degree of
-                customizeability, efficiency, and ease of use.
+                We build fully featured web applications using the latest
+                technologies and frameworks available. We offer a great degree
+                of customizeability, efficiency, and ease of use.
               </p>
               <Button
                 text="Get In Touch"
@@ -53,7 +53,7 @@ const Homepage = (props) => {
           <div className="homepage__what-i-do">
             <div className="homepage__section-headline">
               <h2>Services</h2>
-              <h1>What I do</h1>
+              <h1>What We do</h1>
             </div>
 
             <div className="content-row">
@@ -65,10 +65,11 @@ const Homepage = (props) => {
                 <div className="number">#1</div>
                 <h2>Web App Development</h2>
                 <p>
-                  I specialize in building web applications using the latest
-                  frameworks that are fully customized to your business needs. I
-                  build single page applications (SPAs) in React and use Python
-                  to build out the back-end server running the application.
+                  We specialize in building web applications using the latest
+                  frameworks that are fully customized to your business needs.
+                  We build single page applications (SPAs) in React and use
+                  Python to build out the back-end server running the
+                  application.
                 </p>
                 <Button
                   text="Learn More"
@@ -83,10 +84,10 @@ const Homepage = (props) => {
 
                 <h2>Online Coaching For React</h2>
                 <p>
-                  Do you need to learn React? I provide online coaching services
-                  that will teach you React in about a month’s time. You will
-                  fully learn React, be able to code proficiently with it, and
-                  have a fully functional project built to show for it.
+                  Do you need to learn React? We provide online coaching
+                  services that will teach you React in about a month’s time.
+                  You will fully learn React, be able to code proficiently with
+                  it, and have a fully functional project built to show for it.
                 </p>
                 <Button
                   text="Learn More"
@@ -106,7 +107,7 @@ const Homepage = (props) => {
         <div className="homepage__section">
           <div className="homepage__choose-me">
             <div className="homepage__section-headline">
-              <h2>Why Choose Me</h2>
+              <h2>Why Choose Us</h2>
               <h1>Fast, Efficient, and Reliable</h1>
             </div>
             <div className="reasons-wrapper">
@@ -114,25 +115,25 @@ const Homepage = (props) => {
                 <i className="fas fa-clock" />
                 <h2>Always On Time</h2>
                 <p>
-                  I provide accurate timeframes and I am reliable when it comes
-                  to getting things done on time, or sometimes early.
+                  We provide accurate timeframes and we am reliable when it
+                  comes to getting things done on time, or sometimes early.
                 </p>
               </div>
               <div className="reason">
                 <i className="fas fa-check" />
                 <h2>Hard Working</h2>
                 <p>
-                  I am hard working and very efficient. I love what I do and I
-                  am dedicated to doing whatever is necessary to get the task
-                  done.
+                  We are hard working and very efficient. We love what we do and
+                  we are dedicated to doing whatever is necessary to get the
+                  task done.
                 </p>
               </div>
               <div className="reason">
                 <i className="fas fa-calendar-alt" />
                 <h2>24/7 Available</h2>
                 <p>
-                  I am always available and within reach for any questions or
-                  discussions. I firmly believe effective communication is the
+                  We are always available and within reach for any questions or
+                  discussions. We firmly believe effective communication is the
                   key to a successful collaboration.
                 </p>
               </div>
@@ -198,7 +199,7 @@ const Homepage = (props) => {
 
             <div className="projects-wrapper">
               <div className="homepage__section-headline">
-                <h2>A Few Companies I've Worked With</h2>
+                <h2>A Few Companies We've Worked With</h2>
                 <h1>Projects</h1>
               </div>
 

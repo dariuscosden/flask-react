@@ -103,6 +103,10 @@
 .coaching__section-headline {
   margin-bottom: 20px;
 
+  &.center {
+    text-align: center;
+  }
+
   @media (max-width: $large) {
     margin-bottom: 20px;
   }
